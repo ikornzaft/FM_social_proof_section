@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ddd;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Spartan', sans-serif;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.container__main {
+  background-color: #fff;
+  width: 1440px;
+  height: 800px;
+  margin: 30px 0;
+  background-image: url("images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 75px 160px 0 160px;
+  background-image: url("./images/bg-pattern-top-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0% top;
+}
+.description {
+  text-align: left;
+  width: 46%; 
+  margin-top: 50px;
+  padding-right: 50px; 
+}
+h1 {
+  color: hsl(300, 43%, 22%);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 13px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.reviews {
+  width: 54%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 50px 30px 10px 40px;
+}
+.rate {
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 5px;
+  padding: 18px 30px;
+  width: 430px;
+  display: flex;
+}
+.rate img {
+  width: 18px;
+  height: 17px;
+  margin: 0 4px;
+}
+.rate p {
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 13px;
+  color: hsl(300, 43%, 22%);
+}
+.stars {
+  width: 101px;
+  height: 16px;
+  background-image: url("images/icon-star.svg");
+  background-repeat: space;
+}
+#rate-1 {
+  align-self: flex-start;
+}
+#rate-2 {
+  align-self: center;
+}
+#rate-3 {
+  align-self: flex-end;
+}
+.testimonials {
+  display: flex;
+  height: 300px;
+  width: 100%;
+  margin-top: 60px;
+  padding: 20px 160px 100px 160px;
+  justify-content: space-between;
+}
+.card {
+  background-color: hsl(300, 43%, 22%);
+  color:  hsl(300, 24%, 96%);
+  height: 230px;
+  width: 355px;
+  padding: 32px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+#card-1 {
+  align-self: flex-end;
+}
+#card-2 {
+  align-self: center;
+}
+#card-3 {
+  align-self: flex-start;
+}
+.user {
+  position: relative;
+  margin-bottom: 25px;
+}
+.user img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+}
+.user p {
+  margin-left: 70px;
+}
+.name {
+  font-weight: 700;
+}
+.position {
+  color:  hsl(333, 80%, 67%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+  body {
+    height: 100%;
+  }
+  .container__main {
+    max-width: 375px;
+    height: 100%;
+    background-image: none;
+  }
+  .header {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  .description {
+    width: 100%;
+    padding: 80px 0 0 0;
+    margin: 0;
+    text-align: center;
+  }
+  .description h1 {
+    font-size: 2rem;
+    letter-spacing: -1;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0 50px 0 50px;
+  }
+  .description p {
+    font-size: 0.9rem;
+    padding: 0 25px 0 25px;
+  }
+  .reviews {
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 10px 0;
+  }
+  .rate {
+    margin: 8px 0;
+    padding: 10px 0;
+    width: 300px;
+    flex-direction: column;
+  }
+  #rate-1 {
+    align-self: center;
+  }
+  #rate-3 {
+    align-self: center;
+  }
+  .rate div img {
+    width: 18px;
+    height: 17px;
+    margin: 0 2px 2px 0;
+  }
+  .rate p {
+    font-size: 0.8rem;
+    margin: 0 0 5px 0;
+  }
+  .testimonials {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0;
+  }
+  .card {
+    height: 245px;
+    width: 325px;
+    padding: 40px 30px 40px 30px;
+    border-radius: 10px;
+    margin: 7px 0 7px 0;
+    font-size: 0.8rem;
+  }
+  #card-1 {
+    align-self: center;
+  }
+  #card-3 {
+    align-self: center;
+  }
+  .user img {
+    width: 40px;
+  }
+  .user p {
+    margin-left: 60px;
+  }
+}
